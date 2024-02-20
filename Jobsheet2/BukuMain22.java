@@ -15,5 +15,9 @@ public class BukuMain22 {
         Buku22 bk2 = new Buku22("Self Reward", "Mahera Ayesa", 160, 29, 59000);
         bk2.terjual(11);
         bk2.tampilInformasi();
+
+        Buku22 bkReza= new Buku22( "Fahreza", "Reza", 120, 15, 50000);
+        bkReza.terjual(5);
+        bkReza.tampilInformasi();
     }
 }
