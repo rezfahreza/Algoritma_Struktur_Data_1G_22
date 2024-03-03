@@ -9,5 +9,11 @@ public class Segitiga {
         tinggi=t;
     }
 
-    
+    public double hitungLuas(){
+        return 0.5*alas*tinggi;
+    }
+    public double hitungKeliling(){
+        double miring = Math.sqrt(alas*alas+tinggi*tinggi);
+        return alas+tinggi+miring;
+    }
 }
