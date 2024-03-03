@@ -8,6 +8,13 @@ public class Segitigamain {
         sgArray[2] = new Segitiga(15, 6);
         sgArray[3] = new Segitiga(25, 10);
 
-        
+        for (int i = 0; i < sgArray.length; i++) {
+            double luas = sgArray[i].hitungLuas();
+            double keliling = sgArray[i].hitungKeliling();
+            System.out.println("Segitiga ke-"+i);
+            System.out.println("Luas: "+luas);
+            System.out.println("Keliling: "+keliling);
+            System.out.println();
+        }
     }
 }
