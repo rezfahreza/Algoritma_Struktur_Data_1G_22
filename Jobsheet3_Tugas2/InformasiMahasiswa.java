@@ -13,5 +13,21 @@ public class InformasiMahasiswa {
         this.ipk=ipk;
     }
 
+    public static double hitungRatarata(InformasiMahasiswa[] informasiArray){
+        double totalIpk=0;
+        for (InformasiMahasiswa Mahasiswa : informasiArray) {
+            totalIpk+=Mahasiswa.ipk;
+        }
+        return totalIpk/informasiArray.length;
+    }
 
+    public static InformasiMahasiswa cariIpkTerbesar(InformasiMahasiswa[] informasiArray){
+        InformasiMahasiswa terbesar=informasiArray[0];
+        for (InformasiMahasiswa Mahasiswa : informasiArray) {
+            if (Mahasiswa.ipk>terbesar.ipk) {
+                terbesar=Mahasiswa;
+            }
+        }
+        return terbesar;
+    }
 }

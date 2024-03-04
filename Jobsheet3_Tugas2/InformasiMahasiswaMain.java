@@ -27,5 +27,11 @@ public class InformasiMahasiswaMain {
             System.out.println("Jenis kelamin: "+informasiArray[i].jenisKelamin);
             System.out.println("IPK: "+informasiArray[i].ipk);
         }
+
+        double rataRataIpk=InformasiMahasiswa.hitungRatarata(informasiArray);
+        System.out.println("Rata-rata IPK: "+rataRataIpk);
+
+        InformasiMahasiswa mhs=InformasiMahasiswa.cariIpkTerbesar(informasiArray);
+        System.out.println("IPk terbesar: "+mhs.ipk);
     }
 }
