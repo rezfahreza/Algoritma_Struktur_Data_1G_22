@@ -1,7 +1,5 @@
 package Minggu6;
 
-import java.io.FileReader;
-
 public class DaftarMahasiswaBerprestasi {
     Mahasiswa[] listMhs = new Mahasiswa[5];
     int idx;
