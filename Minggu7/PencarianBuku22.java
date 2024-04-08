@@ -68,7 +68,7 @@ public class PencarianBuku22 {
             int mid = left + (right-left) / 2;
             if (listBk[mid].kodeBuku == cari) {
                 return mid;
-            } else if (listBk[mid].kodeBuku > cari) {
+            } else if (listBk[mid].kodeBuku < cari) {
                 return FindBinarySearch(cari, left, mid-1);
             } else {
                 return FindBinarySearch(cari, mid+1, right);
