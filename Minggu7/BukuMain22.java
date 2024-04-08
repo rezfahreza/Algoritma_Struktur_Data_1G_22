@@ -43,6 +43,12 @@ public class BukuMain22 {
         data.tampilPosisi(cari, posisi);
         data.tampilData(cari, posisi);
 
+        System.out.println("=====================================================");
+        System.out.println("Menggunakan binary search");
+        posisi = data.FindBinarySearch(cari, 0, jmlBuku-1);
+        data.tampilPosisi(cari, posisi);
+        data.tampilData(cari, posisi);
+
         Buku22 dataBuku22 = data.FindBuku(cari);
         dataBuku22.tampilDataBuku();
     }
