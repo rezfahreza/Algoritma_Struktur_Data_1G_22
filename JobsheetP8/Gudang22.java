@@ -88,9 +88,9 @@ public class Gudang22 {
         return biner;
     }
 
-    public Barang22 lihatBarangTerbawah(){
+    public String lihatBarangTerbawah(){
         if (!cekkosong()) {
-            Barang22 barangTerbawah = tumpukan[0];
+            String barangTerbawah = tumpukan[0].nama;
             System.out.println("Barang terbawah: "+barangTerbawah);
             return barangTerbawah;
         } else {
