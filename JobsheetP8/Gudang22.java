@@ -1,5 +1,7 @@
 package JobsheetP8;
 
+import javax.swing.text.AbstractDocument.BranchElement;
+
 public class Gudang22 {
     Barang22[] tumpukan;
     int size;
@@ -84,5 +86,31 @@ public class Gudang22 {
             biner += stack.pop();
         }
         return biner;
+    }
+
+    public Barang22 lihatBarangTerbawah(){
+        if (!cekkosong()) {
+            Barang22 barangTerbawah = tumpukan[0];
+            System.out.println("Barang terbawah: "+barangTerbawah);
+            return barangTerbawah;
+        } else {
+            System.out.println("Tumpukan kosong");
+            return null;
+        }
+    }
+
+    public boolean cariBarang(int kode){
+        if (cekkosong()) {
+            return false;
+        }
+        for (int i = 0; i <= top; i++) {
+            Barang22 barang = tumpukan[i];
+            if (barang.kode == kode) {
+                System.out.println("Barang dengan kode "+kode+" ditemukan pada posisi ke-"+(i+1));
+                return true;
+            }
+        }
+        System.out.println("Barang dengan kode "+kode+" tidak ditemukan");
+        return false;
     }
 }

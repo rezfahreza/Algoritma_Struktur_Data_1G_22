@@ -16,7 +16,9 @@ public class Main22 {
             System.out.println("2. Ambil barang");
             System.out.println("3. Tampilkan tumpukan barang");
             System.out.println("4. Lihat barang teratas");
-            System.out.println("5. keluar");
+            System.out.println("5. Lihat barang terbawah");
+            System.out.println("6. Cari barang");
+            System.out.println("7. keluar");
             System.out.print("Pilih operasi: ");
             int pilihan = sc22.nextInt();
             sc22.nextLine();
@@ -42,6 +44,14 @@ public class Main22 {
                     gudang.lihatBarangTeratas();
                     break;
                 case 5:
+                    gudang.lihatBarangTerbawah();
+                    break;
+                case 6:
+                    System.out.print("Masukkan kode barang yang dicari: ");
+                    int cari = sc22.nextInt();
+                    gudang.cariBarang(cari);
+                    break;
+                case 7:
                     kondisi = false;
                     break;
                 default:
