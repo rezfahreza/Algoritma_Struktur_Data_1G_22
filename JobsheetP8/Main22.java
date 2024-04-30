@@ -6,7 +6,8 @@ public class Main22 {
         Gudang22 gudang = new Gudang22(7);
         Scanner sc22 = new Scanner(System.in);
 
-        while (true) {
+        boolean kondisi = true;
+        while (kondisi) {
             System.out.println("\nMenu:");
             System.out.println("1. Tambah barang");
             System.out.println("2. Ambil barang");
@@ -33,6 +34,7 @@ public class Main22 {
                 case 3:
                     gudang.tampilkanBarang();
                 case 4:
+                    kondisi = false;
                     break;
                 default:
                     System.out.println("Pilihan tida valid. Silahkan coba lagi");
