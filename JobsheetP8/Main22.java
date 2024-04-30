@@ -3,8 +3,11 @@ import java.util.Scanner;
 
 public class Main22 {
     public static void main(String[] args) {
-        Gudang22 gudang = new Gudang22(7);
         Scanner sc22 = new Scanner(System.in);
+
+        System.out.print("Masukkan kapasitas gudang: ");
+        int kapasitas = sc22.nextInt();
+        Gudang22 gudang = new Gudang22(kapasitas);
 
         boolean kondisi = true;
         while (kondisi) {
@@ -12,7 +15,8 @@ public class Main22 {
             System.out.println("1. Tambah barang");
             System.out.println("2. Ambil barang");
             System.out.println("3. Tampilkan tumpukan barang");
-            System.out.println("4. keluar");
+            System.out.println("4. Lihat barang teratas");
+            System.out.println("5. keluar");
             System.out.print("Pilih operasi: ");
             int pilihan = sc22.nextInt();
             sc22.nextLine();
@@ -33,7 +37,11 @@ public class Main22 {
                     break;
                 case 3:
                     gudang.tampilkanBarang();
+                    break;
                 case 4:
+                    gudang.lihatBarangTeratas();
+                    break;
+                case 5:
                     kondisi = false;
                     break;
                 default:
