@@ -10,6 +10,7 @@ public class QueueMain {
         int n = sc22.nextInt();
         Queue q = new Queue(n);
 
+        boolean run = true;
         do {
             menu();
             pilih = sc22.nextInt();
@@ -17,13 +18,10 @@ public class QueueMain {
                 case 1:
                     System.out.print("Masukkan data baru: ");
                     int dataMasuk = sc22.nextInt();
-                    q.Enqueue(dataMasuk);
+                    run = q.Enqueue(dataMasuk);
                     break;
                 case 2:
-                    int dataKeluar = q.Dequeue();
-                    if (dataKeluar != 0) {
-                        System.out.println("Data yang dikeluarkan " + dataKeluar);
-                    }
+                    run = q.Dequeue();
                     break;
                 case 3:
                     q.print();
@@ -35,7 +33,7 @@ public class QueueMain {
                     q.clear();
                     break;
             }
-        } while (pilih == 1 || pilih == 2 || pilih == 3 || pilih == 4 || pilih == 5);
+        } while (run);
     }
 
     public static void menu() {
