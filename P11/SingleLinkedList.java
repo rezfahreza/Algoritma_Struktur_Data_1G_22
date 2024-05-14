@@ -83,4 +83,87 @@ public class SingleLinkedList {
             }
         }
     }
+
+    int getData (int index){
+        Node tmp = head;
+        for (int i = 0; i < index + 1; i++) {
+            tmp = tmp.next;
+        }
+        return tmp.next.data;
+    }
+
+    int indexOf(int key){
+        Node tmp = head;
+        int index = 0;
+        while (tmp != null && tmp.data != key) {
+            tmp = tmp.next;
+            index++;
+        }
+        if (tmp == null) {
+            return 1;
+        } else {
+            return index;
+        }
+    }
+
+    void removeFirst(){
+        if (isEmpty()) {
+            System.out.println("Linkde list masih kosong,"+"tidak dapat dihapus");
+        }else if (head == tail) {
+            head = tail = null;
+        } else {
+            head = head.next;
+        }
+    }
+
+    void removeLast(){
+        if (isEmpty()) {
+            System.out.println("Linked list masih kosong,"+"tidak dapat dihapus");
+        } else if (head == tail) {
+            head = tail = null;
+        } else {
+            Node tmp  = head;
+            while (tmp.next != tail) {
+                tmp = tmp.next;
+            }
+            tmp.next = null;
+            tail = tmp.next;
+        }
+    }
+
+    void remove(int key){
+        if (isEmpty()) {
+            System.out.println("Linked list masih kosong,"+"tidak dapat dihapus");
+        } else {
+            Node tmp = head;
+            while (tmp != null) {
+                if (tmp.data == key && tmp == head) {
+                    removeFirst();
+                    break;
+                } else if (tmp.next.data == key) {
+                    tmp.next = tmp.next.next;
+                    if (tmp.next == null) {
+                        tail = tmp;
+                    }
+                    break;
+                }
+                tmp = tmp.next;
+            }
+        }
+    }
+
+    public void removeAT(int index){
+        if (index == 0) {
+            removeFirst();
+        } else {
+            Node tmp = head;
+            for (int i = 0; i < index-1; i++) {
+                tmp = tmp.next;
+            }
+            tmp.next = tmp.next.next;
+            if (tmp.next == null) {
+                tail = tmp;
+            }
+        }
+    }
 }
