@@ -133,4 +133,33 @@ public class DoubleLinkedList {
             size--;
         }
     }
+
+    public int getFirst() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Linkedlist masih kosong");
+        }
+        return head.data;
+    }
+
+    public int getLast() throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Linkedlist masih kosong");
+        }
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        return temp.data;
+    }
+
+    public int get(int index) throws Exception {
+        if (isEmpty()) {
+            throw new Exception("Linkedlist masih kosong");
+        }
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp.data;
+    }
 }

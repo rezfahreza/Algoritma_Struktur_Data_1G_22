@@ -15,6 +15,10 @@ public class DoubleLinkedListMain {
         dll.add(40, 1);
         dll.print();
         System.out.println("Size : " + dll.size());
+        System.out.println("==========================================");
+        System.out.println("Data awal pada linkedlist adalah : "+dll.getFirst());
+        System.out.println("Data akhir pada linkedlist adalah : "+dll.getLast());
+        System.out.println("Data indek ke-1 pada linkedlist adalah : "+dll.get(1));
         dll.clear();
         dll.print();
         System.out.println("Size : " + dll.size());
